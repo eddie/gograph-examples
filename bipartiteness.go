@@ -34,7 +34,7 @@ func BipartitenessTest(g *graph.Graph) bool {
 		color[y] = Complement(color[x])
 	}
 
-	var state *graph.TraversalState = graph.InitTraversalState()
+	var state *graph.TraversalState = graph.InitTraversalState(g)
 	var funcs *graph.TraversalFuncs = &graph.TraversalFuncs{Edge: processEdge}
 
 	for i := 1; i < g.VertexCount(); i++ {

@@ -9,7 +9,7 @@ func ConnectedComponents(g *graph.Graph) {
 		fmt.Printf(" %d", v)
 	}
 
-	var state *graph.TraversalState = graph.InitTraversalState()
+	var state *graph.TraversalState = graph.InitTraversalState(g)
 	var funcs *graph.TraversalFuncs = &graph.TraversalFuncs{Early: vertexEarly}
 
 	c := 0
